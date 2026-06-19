@@ -200,19 +200,19 @@ MONGO_URI=your_mongodb_connection_string
 
 ### Dashboard Overview
 
-![Dashboard Overview](screenshots/dashboard-overview.png)
+![Dashboard Overview](Screenshots/dashboard-overview.png)
 
 ### Session Tracking & User Journey
 
-![Session Tracking](screenshots/session-tracking.png)
+![Session Tracking](Screenshots/session-tracking.png)
 
 ### Heatmap Analysis
 
-![Heatmap Analysis](screenshots/heatmap-analysis.png)
+![Heatmap Analysis](Screenshots/heatmap-analysis.png)
 
 ### Demo Tracking Page
 
-![Demo Page](screenshots/demo-page.png)
+![Demo Page](Screenshots/demo-page.png)
 
 ---
 
