@@ -2,11 +2,25 @@
 
 ## Overview
 
-A full-stack user analytics application built as part of the CausalFunnel Full Stack Engineer assignment.
+CausalFunnel Analytics Dashboard is a full-stack user analytics platform developed as part of the CausalFunnel Full Stack Engineer Assignment.
 
-The application tracks user interactions on a webpage, stores event data in MongoDB, and visualizes user behavior through an analytics dashboard.
+The application tracks user interactions on a webpage, stores event data in MongoDB Atlas, and visualizes user behavior through an interactive analytics dashboard. It provides session tracking, user journey analysis, event analytics, and click heatmap visualization to help understand user engagement patterns.
 
-Features include session tracking, user journey analysis, event analytics, and click heatmap visualization.
+---
+
+## Live Demo
+
+**Frontend (Vercel):**
+
+https://causalfunnel-analytics-dashboard.vercel.app
+
+**Backend API (Render):**
+
+https://causalfunnel-analytics-dashboard.onrender.com/api/events
+
+**GitHub Repository:**
+
+https://github.com/vinay7376/causalfunnel-analytics-dashboard
 
 ---
 
@@ -14,20 +28,19 @@ Features include session tracking, user journey analysis, event analytics, and c
 
 ### Event Tracking
 
-* Track page views
+* Track page view events
 * Track click events
-* Store session IDs using localStorage
-* Capture page URL
-* Capture timestamp
+* Generate and persist session IDs using localStorage
+* Capture page URL and timestamp
 * Capture click coordinates (X, Y)
-* Send events to backend API
+* Send event data to backend APIs
 
 ### Backend APIs
 
-* Store user events
-* Fetch all events
+* Store user interaction events
+* Fetch all tracked events
 * Fetch sessions with event counts
-* Fetch events for a specific session
+* Retrieve user journey for a specific session
 * Provide click data for heatmap visualization
 
 ### Analytics Dashboard
@@ -36,8 +49,8 @@ Features include session tracking, user journey analysis, event analytics, and c
 * User Journey Timeline
 * Heatmap Analysis
 * Analytics Summary Cards
-* Real-Time Dashboard Updates
-* Click Event Visualization
+* Event Analytics Charts
+* Real-Time User Activity Insights
 
 ---
 
@@ -48,7 +61,7 @@ Features include session tracking, user journey analysis, event analytics, and c
 * React.js
 * Axios
 * Recharts
-* CSS
+* CSS3
 
 ### Backend
 
@@ -59,6 +72,31 @@ Features include session tracking, user journey analysis, event analytics, and c
 
 * MongoDB Atlas
 * Mongoose
+
+### Deployment
+
+* Vercel (Frontend)
+* Render (Backend)
+
+---
+
+## Architecture
+
+```text
+Demo Webpage
+      │
+      ▼
+ Tracker Script
+      │
+      ▼
+ Node.js + Express APIs
+      │
+      ▼
+ MongoDB Atlas
+      │
+      ▼
+ React Analytics Dashboard
+```
 
 ---
 
@@ -81,11 +119,14 @@ frontend/
 │
 backend/
 │
+├── config/
+├── controllers/
 ├── models/
 ├── routes/
-├── controllers/
-├── config/
 └── server.js
+│
+tracker/
+└── tracker.js
 ```
 
 ---
@@ -123,26 +164,22 @@ GET /api/events/session/:sessionId
 ### Clone Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/vinay7376/causalfunnel-analytics-dashboard.git
 ```
 
 ### Backend Setup
 
 ```bash
 cd backend
-
 npm install
-
-npm run dev
+npm start
 ```
 
 ### Frontend Setup
 
 ```bash
 cd frontend
-
 npm install
-
 npm run dev
 ```
 
@@ -150,7 +187,7 @@ npm run dev
 
 ## Environment Variables
 
-Create a `.env` file inside backend folder:
+Create a `.env` file inside the backend directory:
 
 ```env
 PORT=5000
@@ -161,42 +198,49 @@ MONGO_URI=your_mongodb_connection_string
 
 ## Screenshots
 
-### Dashboard
+### Dashboard Overview
 
-* Analytics Overview
-* Session Tracking
-* User Journey Timeline
-* Heatmap Analysis
+![Dashboard Overview](screenshots/dashboard-overview.png)
 
-(Add screenshots here)
+### Session Tracking & User Journey
+
+![Session Tracking](screenshots/session-tracking.png)
+
+### Heatmap Analysis
+
+![Heatmap Analysis](screenshots/heatmap-analysis.png)
+
+### Demo Tracking Page
+
+![Demo Page](screenshots/demo-page.png)
 
 ---
 
 ## Assumptions & Trade-offs
 
-* Session IDs are stored in localStorage.
-* Heatmap is implemented using click coordinate visualization.
-* Real-time updates are simulated through periodic dashboard refresh.
-* Focus was placed on simplicity, readability, and assignment requirements.
+* Session IDs are stored in localStorage for simplicity.
+* Heatmap visualization is implemented using click coordinate plotting.
+* Focus was placed on clean architecture, readability, and assignment requirements.
+* The application is designed for demonstration purposes and can be extended for production-scale analytics.
 
 ---
 
 ## Future Improvements
 
-* Real-time WebSocket updates
-* Advanced Heatmap Rendering
-* User Segmentation
-* Session Replay
-* Authentication & User Management
+* WebSocket-based real-time updates
+* Advanced heatmap rendering
+* User segmentation and filtering
+* Session replay functionality
+* Authentication and role-based access control
+* Multi-page analytics support
 
 ---
 
 ## Author
 
-Vinay Pal
+**Vinay Pal**
 
 B.Tech Computer Science & Engineering
-
 United College of Engineering & Research, Prayagraj
 
-Built for the CausalFunnel Full Stack Engineer Assignment.
+Built for the **CausalFunnel Full Stack Engineer Assignment**.
