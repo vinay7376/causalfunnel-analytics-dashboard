@@ -212,7 +212,7 @@ MONGO_URI=your_mongodb_connection_string
 
 ### Demo Tracking Page
 
-![Demo Page](Screenshots/demo-page.png)
+![Demo Page](Screenshots/Demo.png)
 
 ---
 
