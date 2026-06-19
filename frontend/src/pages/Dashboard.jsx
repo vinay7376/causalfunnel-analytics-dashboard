@@ -20,11 +20,11 @@ function Dashboard() {
     const fetchStats = async () => {
       try {
         const sessionsRes = await axios.get(
-          "http://localhost:5000/api/events/sessions"
+          "https://causalfunnel-analytics-dashboard.onrender.com/api/events/sessions"
         );
 
         const eventsRes = await axios.get(
-          "http://localhost:5000/api/events"
+          "https://causalfunnel-analytics-dashboard.onrender.com/api/events"
         );
 
         const events = eventsRes.data;

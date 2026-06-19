@@ -7,7 +7,7 @@ function Heatmap() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/events")
+      .get("https://causalfunnel-analytics-dashboard.onrender.com/api/events")
       .then((res) => setEvents(res.data))
       .catch((err) => console.log(err));
   }, []);

@@ -6,7 +6,7 @@ function SessionJourney({ sessionId }) {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/events/session/${sessionId}`)
+      .get(`https://causalfunnel-analytics-dashboard.onrender.com/api/events/session/${sessionId}`)
       .then((res) => setEvents(res.data))
       .catch((err) => console.log(err));
   }, [sessionId]);

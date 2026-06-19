@@ -13,7 +13,7 @@
   localStorage.setItem("sessionId", sessionId);
 
   const API_URL =
-    "http://localhost:5000/api/events";
+    "https://causalfunnel-analytics-dashboard.onrender.com/api/events";
 
   async function sendEvent(eventData) {
     try {

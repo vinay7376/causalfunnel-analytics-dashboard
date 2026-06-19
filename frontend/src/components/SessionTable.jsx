@@ -7,7 +7,7 @@ function SessionTable({ onSelectSession }) {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/events/sessions")
+      .get("https://causalfunnel-analytics-dashboard.onrender.com/api/events/sessions")
       .then((res) => setSessions(res.data))
       .catch((err) => console.log(err));
   }, []);
